@@ -1,0 +1,5 @@
+- Create a fixed-size thread pool
+  - Threads are blocked until a connection is available
+  - Requests are buffered until a thread can handle the request
+- Store requests (connection descriptor) in a buffer with a given size
+- Implement FIFO only
