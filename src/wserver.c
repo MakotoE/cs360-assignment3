@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
     char *root_dir = ".";
     long port = 10000;
 	long threads = 1;
-	long buffer_size = 1;
+	size_t buffer_size = 1;
     
     while ((c = getopt(argc, argv, "d:p:")) != -1) {
 		switch (c) {
@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
 		}
 		case 'b':{
 			char *end = NULL;
-			buffer_size = strtol(optarg, &end, 10);
+			buffer_size = (size_t)strtol(optarg, &end, 10);
 			break;
 		}
 		case 's': {
