@@ -19,5 +19,5 @@ int thread_pool_init(thread_pool* pool, long thread_count, size_t buffer_size) {
 }
 
 void thread_pool_free(thread_pool* pool) {
-
+	free(pool->conn_buffer);
 }
