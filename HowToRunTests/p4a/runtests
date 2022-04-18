@@ -1,4 +1,0 @@
-#!/bin/bash
-base=~/cs360/projects/p4a
-python2.7 $base/test_p4a.py --test-path $base $@ | tee -i runtests.log
-exit $?
